@@ -19,24 +19,28 @@ const SKILLS = [
   { id: 13, skill: 'Next JS' },
 ];
 
+const MovableSkillsComponent = ({ skills }) => {
+  return (
+    <div className='flex flex-wrap flex-row justify-center z-10 md:justify-start'>
+      {skills.map(item => {
+        return (
+          <p
+            key={item.id}
+            className='bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold'
+          >
+            {item.skill}
+          </p>
+        );
+      })}
+    </div>
+  );
+};
+
 const TABS_DATA = [
   {
     id: 'skills',
     title: 'Skills',
-    content: (
-      <div className='flex flex-wrap flex-row justify-center z-10 md:justify-start'>
-        {SKILLS.map(item => {
-          return (
-            <p
-              key={item.id}
-              className='bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold'
-            >
-              {item.skill}
-            </p>
-          );
-        })}
-      </div>
-    ),
+    content: <MovableSkillsComponent skills={SKILLS} />,
   },
   {
     id: 'education',
@@ -63,6 +67,12 @@ const TABS_DATA = [
   },
 ];
 
+const AboutSectionIntroParagraph = `
+I have a passion for building technology that is human centric. Quo
+ratione hic quaerat voluptatibus voluptatem quidem, animi eos, vero
+blanditiis rerum sequi consequuntur accusantium optio adipisci?
+`;
+
 const AboutSectionImage = () => {
   return (
     <Image
@@ -71,17 +81,6 @@ const AboutSectionImage = () => {
       height='500'
       alt='about image'
     />
-  );
-};
-
-const AboutSectionIntroParagraph = () => {
-  return (
-    <p className='text-base lg:text-lg'>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam libero
-      facilis hic ex? Quo ratione hic quaerat voluptatibus voluptatem quidem,
-      animi eos, vero blanditiis rerum sequi consequuntur accusantium optio
-      adipisci?
-    </p>
   );
 };
 
@@ -103,7 +102,7 @@ export const AboutSection = () => {
         <AboutSectionImage />
         <div className='mt4 md:mt-0 text-left flex flex-col h-full'>
           <h2 className='text-4xl font-bold text-white mb-4'>About me</h2>
-          <AboutSectionIntroParagraph />
+          <p className='text-base lg:text-lg'>{AboutSectionIntroParagraph}</p>
           <div className='flex flex-row mt-8'>
             <TabButton
               active={tab === 'skills'}
