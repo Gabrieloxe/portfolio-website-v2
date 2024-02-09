@@ -40,9 +40,7 @@ const RotatingText = () => {
         //
         'Gabriel',
         1000,
-        'a full Stack Developer',
-        1000,
-        'Support Solution Engineer',
+        'a Software Engineer',
         1000,
         'a Dancer',
         1000,
@@ -67,10 +65,10 @@ export const HeroSection = () => {
             <RotatingText />
           </h1>
           <p className='text-[#AdB7BE] text-base sm:text-lg mb-6 lg:text-xl'>
-            I&apos;m a 🌱 Full Stack Developer. Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Illum sunt quidem rem dolorum eius
-            vero fugiat magni quas sint, harum iure veritatis, totam porro!
-            Labore sit et pariatur est. Suscipit.
+            I&apos;m a 🌱 Full Stack Developer. Based in Singapore, consectetur
+            adipisicing elit. Illum sunt quidem rem dolorum eius vero fugiat
+            magni quas sint, harum iure veritatis, totam porro! Labore sit et
+            pariatur est. Suscipit.
           </p>
           <CvButtons />
         </div>

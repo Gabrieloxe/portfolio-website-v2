@@ -7,7 +7,8 @@ const projectsData = [
   {
     id: 1,
     title: 'Will you be my Girlfriend?',
-    description: 'This is a project description',
+    description:
+      'This is the public version of the project that I made to ask my girlfriend to be mine. Stack:  Next.js, styled components, Vercel.',
     imageUrl: '/images/projects/date_me.png',
     tag: ['All', 'Frontend'],
     githubUrl: 'https://github.com/Gabrieloxe/date-me',
@@ -26,7 +27,7 @@ const projectsData = [
     id: 3,
     title: 'Project 3',
     description: 'This is a project description',
-    imageUrl: '/images/projects/123.png',
+    imageUrl: '/images/projects/placeholder.png',
     tag: ['All', 'fullstack'],
     githubUrl: '/',
     previewUrl: '/',
@@ -35,7 +36,7 @@ const projectsData = [
     id: 4,
     title: 'Project 4',
     description: 'This is a project description',
-    imageUrl: '/images/projects/123.png',
+    imageUrl: '/images/projects/placeholder.png',
     tag: ['All', 'frontend'],
     githubUrl: '/',
     previewUrl: '/',
