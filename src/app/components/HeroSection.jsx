@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 
+const heroColourClasses = 'from-primary-800 via-primary-500 to-secondary-500';
+
 const HeroImage = () => {
   return (
     <div className='rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative'>
@@ -21,10 +23,14 @@ const HeroImage = () => {
 const CvButtons = () => {
   return (
     <div>
-      <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-800 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white font-semibold'>
+      <button
+        className={`px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br ${heroColourClasses} hover:bg-slate-200 text-white font-semibold`}
+      >
         Hire Me
       </button>
-      <button className='px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-800 via-primary-500 to-secondary-500 hover:bg-slate-800 text-white font-semibold mt-3'>
+      <button
+        className={`px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br ${heroColourClasses} hover:bg-slate-800 text-white font-semibold mt-3`}
+      >
         <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>
           Download CV
         </span>
@@ -54,7 +60,6 @@ const RotatingText = () => {
 };
 
 export const HeroSection = () => {
-  const heroColourClasses = 'from-primary-800 via-primary-500 to-secondary-500';
   return (
     <section className='lg:py-16  '>
       <div className='grid grid-cols-1 sm:grid-cols-12'>
