@@ -21,18 +21,20 @@ const navLinks = [
 ];
 
 const HamburgerButton = ({ navbarOpen, setNavbarOpen }) => {
+  const hamburgerColourClasses =
+    'border-slate-200 text-slate-200 hover:text-white hover:border-white';
   return (
     <>
       {!navbarOpen ? (
         <button
-          className='flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white'
+          className={`flex items-center px-3 py-2 border rounded ${hamburgerColourClasses}`}
           onClick={() => setNavbarOpen(true)}
         >
           <Bars3Icon className='h-5 w-5' />
         </button>
       ) : (
         <button
-          className='flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white'
+          className={`flex items-center px-3 py-2 border rounded ${hamburgerColourClasses}`}
           onClick={() => setNavbarOpen(false)}
         >
           <XMarkIcon className='h-5 w-5' />
