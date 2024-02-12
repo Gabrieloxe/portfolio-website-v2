@@ -1,6 +1,12 @@
-import React from 'react';
+'use client';
+import React, { useRef } from 'react';
 import { Card } from './Card';
+import { motion, useInView } from 'framer-motion';
 
+const cardVariants = {
+  initial: { y: 50, opacity: 0 },
+  animate: { y: 0, opacity: 1 },
+};
 const EDUCATION = [
   {
     id: 1,
@@ -22,19 +28,48 @@ const EDUCATION = [
   },
 ];
 
+const EducationCard = ({ id, school, title, timeline }) => {
+  return (
+    <Card>
+      <div>
+        <li className='text-2xl sm:text-xl font-bold'>{school}</li>
+        <li className='mb-2'>{title}</li>
+        <li>
+          <span className='font-bold'>Period: </span>
+          {timeline}
+        </li>
+      </div>
+    </Card>
+  );
+};
+
 export const Education = () => {
-  return EDUCATION.map(item => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+  });
+  return EDUCATION.map((item, index) => {
     return (
-      <Card key={item.id}>
-        <ul>
-          <li className='text-2xl sm:text-xl font-bold'>{item.school}</li>
-          <li className='mb-2'>{item.title}</li>
-          <li>
-            <span className='font-bold'>Period: </span>
-            {item.timeline}
-          </li>
-        </ul>
-      </Card>
+      <ul
+        ref={ref}
+        key={item.id}
+      >
+        <motion.li
+          variants={cardVariants}
+          initial='initial'
+          animate={isInView ? 'animate' : 'initial'}
+          key={item.id}
+          transition={{ duration: 0.3, delay: index * 0.4 }}
+        >
+          <EducationCard
+            key={item.id}
+            id={item.id}
+            school={item.school}
+            title={item.school}
+            timeline={item.timeline}
+          />
+        </motion.li>
+      </ul>
     );
   });
 };

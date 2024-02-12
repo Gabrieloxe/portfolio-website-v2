@@ -26,7 +26,7 @@ const TABS_DATA = [
 
 const AboutSectionIntroParagraph = `
 I'm a have a passion for building technology that is human centric.
-Being able to craft simple yet beautiful websites with great user experience,
+The joy of being able to craft simple yet beautiful websites with great user experience,
 that serve their purpose without overcomplicating things`;
 
 const AboutSectionImage = () => {

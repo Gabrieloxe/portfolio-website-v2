@@ -1,8 +1,9 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
+import { RotatingText } from './RotatingText';
+import { HeroButton } from './HeroButton';
 
 const heroColourClasses = 'from-primary-800 via-primary-500 to-secondary-500';
 
@@ -17,45 +18,6 @@ const HeroImage = () => {
         height={300}
       />
     </div>
-  );
-};
-
-const CvButtons = () => {
-  return (
-    <div>
-      <button
-        className={`px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br ${heroColourClasses} hover:bg-slate-200 text-white font-semibold`}
-      >
-        Hire Me
-      </button>
-      <button
-        className={`px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br ${heroColourClasses} hover:bg-slate-800 text-white font-semibold mt-3`}
-      >
-        <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>
-          Download CV
-        </span>
-      </button>
-    </div>
-  );
-};
-
-const RotatingText = () => {
-  // type animation sample component code
-  return (
-    <TypeAnimation
-      sequence={[
-        //
-        'Gabriel',
-        1000,
-        'a Software Engineer',
-        1000,
-        'a Dancer',
-        1000,
-      ]}
-      wrapper='span'
-      speed={50}
-      repeat={Infinity}
-    />
   );
 };
 
@@ -76,13 +38,42 @@ export const HeroSection = () => {
               Hello, I&apos;m
             </span>{' '}
             <br />
-            <RotatingText />
+            <RotatingText
+              textSequence={[
+                'Gabriel',
+                1000,
+                'a Software Engineer',
+                1000,
+                'a Dancer',
+                1000,
+              ]}
+            />
           </h1>
           <p className='text-[#AdB7BE] text-base sm:text-lg mb-6 lg:text-xl'>
             🌱 Full Stack Developer based in Singapore, currently plowing my
             craft at Smartly.io
           </p>
-          <CvButtons />
+          <div>
+            <HeroButton
+              href='/#contact'
+              styles='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br hover:bg-slate-200 text-white font-semibold'
+              text='Hire Me'
+              textStyles='rounded-full block'
+              colourClasses={heroColourClasses}
+            >
+              {' '}
+              Hire Me
+            </HeroButton>
+            <HeroButton
+              href='https://docs.google.com/document/d/1IPh2X0XcyQnoZP4u6OpSDaxuuY0W8Wcy/export?format=pdf'
+              styles='px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br hover:bg-slate-800 text-white font-semibold mt-3'
+              textStyles='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'
+              colourClasses={heroColourClasses}
+            >
+              {' '}
+              Download CV
+            </HeroButton>
+          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}

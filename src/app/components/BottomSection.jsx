@@ -34,7 +34,10 @@ const BlueCircle = () => {
 
 export const BottomSection = () => {
   return (
-    <section className='container justify-start flex w-full my-12 md:my-12 py-24 gap-4 relative'>
+    <section
+      id='contact'
+      className='container justify-start flex w-full my-12 md:my-12 py-24 gap-4 relative'
+    >
       <BlueCircle />
       <div className='z-10 max-w-md'>
         <h5 className='text-xl font-bold text-white my-2'>

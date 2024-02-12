@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from './Card';
 
-const CERTIFICATIONS = [
+const CERTS = [
   {
     id: 1,
     title: 'Supervised Learning with scikit-learn',
@@ -11,22 +11,22 @@ const CERTIFICATIONS = [
   },
 ];
 
-const Certifications = () => {
-  return CERTIFICATIONS.map(item => {
+export const Certifications = () => {
+  return CERTS.map(cert => {
     return (
-      <Card key={item.id}>
+      <Card key={cert.id}>
         <ul>
-          <li className='text-2xl mb-2 sm:text-xl font-bold'>{item.title}</li>
+          <li className='text-2xl mb-2 sm:text-xl font-bold'>{cert.title}</li>
           <li>
             <span className='font-bold'>Organization: </span>{' '}
-            {item.issuingOrganization}
+            {cert.issuingOrganization}
           </li>
           <li>
-            <span className='font-bold'>Issue Date: </span> {item.issueDate}
+            <span className='font-bold'>Issue Date: </span> {cert.issueDate}
           </li>
           <li>
             <span className='font-bold'>Credential ID: </span>{' '}
-            {item.credentialId}
+            {cert.credentialId}
           </li>
         </ul>
       </Card>
