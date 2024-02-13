@@ -10,7 +10,7 @@ const cardVariants = {
 const EDUCATION = [
   {
     id: 1,
-    title: 'B.sc Information Systems',
+    title: 'Bachelor Of Science in Information Systems',
     school: 'Singapore Management University',
     timeline: '2016 - 2020',
   },
@@ -28,12 +28,12 @@ const EDUCATION = [
   },
 ];
 
-const EducationCard = ({ id, school, title, timeline }) => {
+const EducationCard = ({ school, title, timeline }) => {
   return (
     <Card>
       <div>
-        <li className='text-2xl sm:text-xl font-bold'>{school}</li>
-        <li className='mb-2'>{title}</li>
+        <li className='text-2xl sm:text-xl font-bold'>{title}</li>
+        <li className='mb-2 text-warmGray-400'>{school}</li>
         <li>
           <span className='font-bold'>Period: </span>
           {timeline}
@@ -50,10 +50,7 @@ export const Education = () => {
   });
   return EDUCATION.map((item, index) => {
     return (
-      <ul
-        ref={ref}
-        key={item.id}
-      >
+      <ul ref={ref} key={item.id}>
         <motion.li
           variants={cardVariants}
           initial='initial'
@@ -65,7 +62,7 @@ export const Education = () => {
             key={item.id}
             id={item.id}
             school={item.school}
-            title={item.school}
+            title={item.title}
             timeline={item.timeline}
           />
         </motion.li>
