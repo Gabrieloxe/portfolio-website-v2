@@ -1,11 +1,11 @@
 import React from 'react';
 import { HeroSection } from './components/hero/HeroSection';
-import { Navbar } from './components/Navbar';
+import { Navbar } from './components/navbar/Navbar';
 import { AboutSection } from './components/about/AboutSection';
-import { ProjectsSection } from './components/ProjectsSection';
+import { ProjectsSection } from './components/projects/ProjectsSection';
 import { Footer } from './components/Footer';
 import { BottomSection } from './components/BottomSection';
-import { AchievementSection } from './components/AchievementSection';
+import { AchievementSection } from './components/achievement/AchievementSection';
 
 export default function Home() {
   return (
