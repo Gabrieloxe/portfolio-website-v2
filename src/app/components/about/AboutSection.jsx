@@ -30,8 +30,8 @@ const AboutSectionImage = () => {
 
 const AboutSectionParagraphs = [
   `Ever been to a website and thought, this website sucks? I feel you, I've been there. Having started my career in technical product support,
-   I am convicted that a great user experience is the fundamental pillar to a successful product. This fuels my passion for building technology that is human centric.`,
-  `My educational background is in Information Systems and Business Administration with a minor in communications, a recipe to build web applications that make sense to everyone`,
+   I am convicted that a great user experience is the cornerstone to a successful product. This in turn fuels my passion for building technology that is human centric.`,
+  `My educational background is in Information Systems and Business Administration with a minor in communications, a recipe I believe, that enables me to build web applications that make sense for everyone`,
   `After work you will either catch me in a dance studio taking a hip hop class, spending time with my loved ones or working on a new coding project`
 ];
 
