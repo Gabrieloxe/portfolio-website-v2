@@ -14,7 +14,7 @@ export async function POST() {
         <>
           <p>Email Body</p>
         </>
-      ),
+      )
     });
 
     return Response.json(data);
