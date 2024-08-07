@@ -4,6 +4,7 @@ import { CompanyExperience } from '../about/Experiences';
 
 const smartlyData = {
   name: 'Smartly',
+  url : 'https://smartly.io',
   positions: [
     {
       title: 'Senior Support Solutions Engineer',
@@ -11,7 +12,6 @@ const smartlyData = {
       responsibilities: [
         'Building and maintaining a company wide admin panel using using React typescript connected to endpoints in the respective product team microservices',
         'Project lead for designing and building a company wide emergency internal and external communication tool',
-        'Tech Stack Exposure: React, PostgreSQL, Snowflake, Python, ES6, Node.js+TypeScript, PHP, Ruby',
       ],
     },
     {
@@ -24,6 +24,7 @@ const smartlyData = {
       ],
     },
   ],
+  techStack: ['React', 'PostgreSQL', 'Snowflake', 'Python', 'ES6', 'Node.js+TypeScript', 'PHP', 'Ruby'],
 };
 
 const rgaData = {

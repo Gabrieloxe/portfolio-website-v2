@@ -17,7 +17,7 @@ const achievementsList = [
   },
   {
     title: 'Years',
-    value: '3',
+    value: '4',
     postfix: '+',
   },
   {
