@@ -28,21 +28,12 @@ const projectsData = [
   {
     id: 3,
     title: 'Project 3',
-    description: 'This is a project description',
+    description: 'Coming soon ...',
     imageUrl: '/images/projects/placeholder.png',
     tag: ['All', 'fullstack'],
     githubUrl: '/',
     previewUrl: '/',
-  },
-  {
-    id: 4,
-    title: 'Project 4',
-    description: 'This is a project description',
-    imageUrl: '/images/projects/placeholder.png',
-    tag: ['All', 'fullstack'],
-    githubUrl: '/',
-    previewUrl: '/',
-  },
+  }
 ];
 
 export const ProjectsSection = () => {

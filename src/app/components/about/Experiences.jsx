@@ -1,41 +1,39 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowTurnUpRightIcon } from '@heroicons/react/24/solid';
 
-const EXPERIENCE = [
-  {
-    id: 1,
-    title: 'Support Solutions Engineer',
-    responsibilities: ['responsbility 1'],
-    period: '2021 may - present',
-  },
-  {
-    id: 2,
-    title: 'Support Solutions Engineer',
-    responsibilities: ['responsbility 1'],
-  },
-  {
-    id: 2,
-    title: 'Support Solutions Engineer',
-    responsibilities: ['responsbility 1'],
-  },
-];
-
-export const Experiences = () => {
+export const CompanyExperience = ({ company }) => {
   return (
-    <section id='experience' className='max-w-containerxs mx-auto px-2'>
-      <div className='w-full flex flex-col md:flex-row gap-16'>
-        <ul className='md:w-32 flex flex-col'>
-          <li className='border-1-2 border-l-blue-500 bg-transparent text-slate-600 hover:text-primary-500 hover:bg-[#33353F] px-8 py-3 text-sm cursor-pointer duration-300 font-medium'>
-            Smartly.io
-          </li>
-          <li className='border-1-2 border-l-blue-500 bg-transparent text-slate-600  hover:text-primary-500 hover:bg-[#33353F] px-3 py-3 text-sm cursor-pointer duration-300 font-medium'>
-            Smartly.io
-          </li>
-          <li className='border-1-2 border-l-blue-500 bg-transparent text-slate-600  hover:text-primary-500 hover:bg-[#33353F] px-3 py-3 text-sm cursor-pointer duration-300 font-medium'>
-            Smartly.io
-          </li>
-        </ul>
-      </div>
-      <div></div>
-    </section>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.1 }}
+      className='w-full'
+    >
+      {company.positions.map((position, index) => (
+        <div key={index}>
+          <h3 className='flex gap-1 font-medium text-xl font-titleFont'>
+            {position.title}{' '}
+            <span className='text-primary-500 tracking-wide'>
+              @{company.name}
+            </span>
+          </h3>
+          <p>{position.duration}</p>
+          <ul className='mt-6 flex flex-col gap-3'>
+            {position.responsibilities.map((responsibility, idx) => (
+              <li
+                key={idx}
+                className='text-base flex gap-2 text-secondary-50 mt-1'
+              >
+                <span className='text-primary-500 mt-1'>
+                  <ArrowTurnUpRightIcon className='h-5 w-5' />
+                </span>
+                {responsibility}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </motion.div>
   );
 };
