@@ -23,7 +23,7 @@ export const Skills = () => {
         return (
           <p
             key={item.id}
-            className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold"
+            className="flex items-center rounded-full bg-teal-400/10 px-4 py-2 mr-2 mt-2  font-semibold leading-5 text-slate-100 "
           >
             {item.skill}
           </p>
