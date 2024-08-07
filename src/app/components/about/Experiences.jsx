@@ -1,6 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowTurnUpRightIcon } from '@heroicons/react/24/solid';
+import { ArrowTurnDownRightIcon } from '@heroicons/react/24/solid';
+
+export const TabItem = ({ activeTabId, tabId, label, onClick }) => {
+  return (
+    <li
+      className={`border-1-2 border-l ${
+        activeTabId === tabId ? 'border-primary-500 text-primary-500' : 'border-gray-500'
+      } bg-transparent hover:bg-[#33353F] px-3 py-3 text-sm cursor-pointer duration-300 font-medium hover:text-primary-300`}
+      onClick={onClick}
+    >
+      {label}
+    </li>
+  );
+};
 
 export const CompanyExperience = ({ company }) => {
   return (
@@ -28,9 +41,9 @@ export const CompanyExperience = ({ company }) => {
             {position.responsibilities?.map((responsibility, idx) => (
               <li key={idx} className="text-base flex gap-2 text-secondary-50 mt-1">
                 <span className="text-primary-500 mt-1">
-                  <ArrowTurnUpRightIcon className="h-5 w-5" />
+                  <ArrowTurnDownRightIcon className="h-5 w-5" />
                 </span>
-                {responsibility}
+                <p className="text-base lg:text-lg">{responsibility}</p>
               </li>
             ))}
           </ul>

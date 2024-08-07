@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { CompanyExperience } from '../about/Experiences';
+import { CompanyExperience, TabItem } from '../about/Experiences';
 
 const smartlyData = {
   name: 'Smartly',
@@ -38,6 +38,7 @@ const smartlyData = {
 
 const rgaData = {
   name: 'RGA',
+  url: 'https://rga.com',
   positions: [
     {
       title: 'Strategy Intern',
@@ -60,22 +61,18 @@ export const ExperienceSection = () => {
       </h2>
       <div className="w-full flex flex-col md:flex-row gap-16">
         <ul className="md:w-32 flex flex-col">
-          <li
-            className={`border-1-2 border-l ${
-              activeTabId === 0 ? 'border-primary-500' : 'border-gray-500'
-            } bg-transparent hover:bg-[#33353F] px-3 py-3 text-sm cursor-pointer duration-300 font-medium`}
+          <TabItem
+            activeTabId={activeTabId}
+            tabId={0}
+            label="Smartly"
             onClick={() => setActiveTabId(0)}
-          >
-            Smartly
-          </li>
-          <li
-            className={`border-1-2 border-l ${
-              activeTabId === 1 ? 'border-primary-500' : 'border-gray-500'
-            } bg-transparent hover:bg-[#33353F] px-3 py-3 text-sm cursor-pointer duration-300 font-medium`}
+          />
+          <TabItem
+            activeTabId={activeTabId}
+            tabId={1}
+            label="RGA"
             onClick={() => setActiveTabId(1)}
-          >
-            RGA
-          </li>
+          />
         </ul>
         <div className="flex-1">
           {activeTabId === 0 && <CompanyExperience company={smartlyData} />}
