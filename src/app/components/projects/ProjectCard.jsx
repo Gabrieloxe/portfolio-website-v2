@@ -3,7 +3,7 @@ import { EyeIcon } from '@heroicons/react/24/outline';
 import { BsGithub } from 'react-icons/bs';
 import Link from 'next/link';
 
-const ProjectCard = ({ imageUrl, title, description, githubUrl, previewUrl }) => {
+const ProjectCard = ({ imageUrl, title, description, githubUrl, previewUrl, stack }) => {
   return (
     <div>
       <div
@@ -32,6 +32,15 @@ const ProjectCard = ({ imageUrl, title, description, githubUrl, previewUrl }) =>
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
         <p className="text-[#ADB7BE]">{description}</p>
       </div>
+      <ul className="mt-2 mb-5 flex flex-wrap">
+        {stack?.map((tech, idx) => (
+          <li key={idx} className="mr-1.5 mt-2">
+            <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-primary-300 ">
+              {tech}
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

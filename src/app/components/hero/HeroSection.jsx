@@ -39,7 +39,7 @@ export const HeroSection = () => {
             </span>{' '}
             <br />
             <RotatingText
-              textSequence={['Gabriel', 1000, 'a Software Engineer', 1000, 'a Dancer', 1000]}
+              textSequence={['Gabriel', 1000, 'a Software Engineer', 1000, 'a Dance Student', 1000]}
             />
           </h1>
           <p className="text-[#AdB7BE] text-base sm:text-lg mb-6 lg:text-xl">

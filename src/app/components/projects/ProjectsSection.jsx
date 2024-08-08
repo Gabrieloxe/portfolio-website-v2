@@ -9,26 +9,29 @@ const projectsData = [
     id: 1,
     title: 'Will you be my Girlfriend?',
     description:
-      'This is the public version of the project that I made to ask my girlfriend to be mine. Stack:  Next.js, styled components, Vercel.',
+      'This is the public version of the project I made when asking my girlfriend to become mine.',
     imageUrl: '/images/projects/date_me.png',
     tag: ['All', 'Frontend'],
     githubUrl: 'https://github.com/Gabrieloxe/date-me',
-    previewUrl: 'https://willyoudateme.vercel.app/'
+    previewUrl: 'https://willyoudateme.vercel.app/',
+    stack: ['Next.js', 'Styled Components', 'Vercel', 'Framer Motion']
   },
   {
     id: 2,
     title: 'Korean Lyrics Extractor',
-    description: 'This is a project description',
+    description:
+      'This is a local script you can run to get the Korean lyrics to your favorite Korean song. This was built in the middle of Covid when I was bored',
     imageUrl: '/images/projects/melon.png',
-    tag: ['All', 'Fullstack'],
+    tag: ['All'],
     githubUrl: 'https://github.com/Gabrieloxe/CircuitBreakerGab/tree/master/koreanLyricsExtractor',
-    previewUrl: '/'
+    previewUrl: '/',
+    stack: ['Python', 'Selenium']
   },
   {
     id: 3,
     title: 'Project 3',
     description: 'Coming soon ...',
-    imageUrl: '/images/projects/placeholder.png',
+    imageUrl: '/images/projects/construction.jpeg',
     tag: ['All', 'fullstack'],
     githubUrl: '/',
     previewUrl: '/'
@@ -88,6 +91,7 @@ export const ProjectsSection = () => {
                 description={project.description}
                 githubUrl={project.githubUrl}
                 previewUrl={project.previewUrl}
+                stack={project.stack}
               />
             </motion.li>
           );
