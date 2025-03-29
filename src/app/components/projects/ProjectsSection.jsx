@@ -3,40 +3,7 @@ import React, { useState, useRef } from 'react';
 import ProjectCard from './ProjectCard';
 import { ProjectTag } from './ProjectTag';
 import { motion, useInView } from 'framer-motion';
-
-const projectsData = [
-  {
-    id: 1,
-    title: 'Will you be my Girlfriend?',
-    description:
-      'This is the public version of the project I made when asking my girlfriend to become mine.',
-    imageUrl: '/images/projects/date_me.png',
-    tag: ['All', 'Frontend'],
-    githubUrl: 'https://github.com/Gabrieloxe/date-me',
-    previewUrl: 'https://willyoudateme.vercel.app/',
-    stack: ['Next.js', 'Styled Components', 'Vercel', 'Framer Motion']
-  },
-  {
-    id: 2,
-    title: 'Korean Lyrics Extractor',
-    description:
-      'This is a local script you can run to get the Korean lyrics to your favorite Korean song. This was built in the middle of Covid when I was bored',
-    imageUrl: '/images/projects/melon.png',
-    tag: ['All'],
-    githubUrl: 'https://github.com/Gabrieloxe/CircuitBreakerGab/tree/master/koreanLyricsExtractor',
-    previewUrl: '/',
-    stack: ['Python', 'Selenium']
-  },
-  {
-    id: 3,
-    title: 'Project 3',
-    description: 'Coming soon ...',
-    imageUrl: '/images/projects/construction.jpeg',
-    tag: ['All', 'fullstack'],
-    githubUrl: '/',
-    previewUrl: '/'
-  }
-];
+import projectsData from './projectsData.json';
 
 export const ProjectsSection = () => {
   const [selectedTag, setSelectedTag] = useState('All');
