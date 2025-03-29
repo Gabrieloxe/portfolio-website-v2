@@ -29,7 +29,27 @@ const projectsData = [
   },
   {
     id: 3,
-    title: 'Project 3',
+    title: 'Helsinki FullstackOpen Course',
+    description:
+      'This is a repository of many tiny applications, where i have been learning different fullstack topics. There are mnay technologies displayed as i use some in each exercise',
+    stack: [
+      'Node.js',
+      'Express',
+      'MongoDB',
+      'React',
+      'Redux',
+      'Vite',
+      'Tailwind CSS',
+      'Ant Design'
+    ],
+    imageUrl: '/images/projects/fullstackopen.png',
+    tag: ['All', 'fullstack'],
+    githubUrl: 'https://github.com/Gabrieloxe/gabriel-fullstackopen',
+    previewUrl: 'https://ex3-phonebook-backend.onrender.com/'
+  },
+  {
+    id: 4,
+    title: 'Project 4',
     description: 'Coming soon ...',
     imageUrl: '/images/projects/construction.jpeg',
     tag: ['All', 'fullstack'],
