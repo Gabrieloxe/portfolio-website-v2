@@ -11,7 +11,8 @@ const smartlyData = {
       duration: 'April 2024 - Present',
       responsibilities: [
         'Building and maintaining a company wide admin panel using using React typescript connected to endpoints in the respective product team microservices',
-        'Project lead for designing and building a company wide emergency internal and external communication tool'
+        'Project lead for designing and building a company wide emergency internal and external communication tool',
+        'Built an internal changelog for tiktok objects'
       ]
     },
     {
