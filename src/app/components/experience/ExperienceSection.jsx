@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
-import { CompanyExperience, TabItem } from './Experiences';
+import { CompanyExperience } from './CompanyExperience';
+import { TabItem } from './TabItem';
 
 // Experience data
 const experienceData = [
